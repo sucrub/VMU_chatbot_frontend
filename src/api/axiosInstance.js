@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { store } from '../store';
-import { clearAuth } from '../store/slices/authSlice';
 import { API_URL } from '../configs';
 
 const axiosInstance = axios.create({

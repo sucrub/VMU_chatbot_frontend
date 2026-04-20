@@ -6,6 +6,7 @@ import { setAuth, selectUser } from '../../store/slices/authSlice';
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../../api";
+import { LOGIN_COLOR } from "../../configs/color";
 
 const Login = () => {
 
@@ -39,42 +40,27 @@ const Login = () => {
 
     return (
         <div style={styles.loginContainer}>
-            <img
-                src="/img.png"
-                alt="background"
-                style={styles.loginBackground}
-            />
+            <div style={styles.bgGrid} />
+            <div style={styles.bgGlow} />
 
             <Card style={styles.card} bordered={false}>
-                {/* HEADER */}
-                <div style={styles.header}>
+                <div style={styles.logoRing}>
                     <img src="/logo.svg" alt="Logo" style={styles.logo} />
-
-                    <h1 style={styles.title}>
-                        TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM
-                    </h1>
-
-                    <h3 style={styles.title2}>
-                        HỆ THỐNG CHAT BOT
-                    </h3>
                 </div>
 
-                {/* FORM */}
-                <div style={styles.form}>
-                    <Button
-                        size="large"
-                        block
-                        style={styles.googleButton}
-                        onClick={() => login()}
-                    >
-                        <img
-                            src="/google-icon.webp"
-                            alt="google"
-                            style={styles.googleIcon}
-                        />
-                        Đăng nhập với Google
-                    </Button>
-                </div>
+                <h1 style={styles.title}>TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM</h1>
+                <h3 style={styles.title2}>Hệ thống Chat Bot</h3>
+
+                <div style={styles.divider} />
+
+                <Button size="large" block style={styles.googleButton} onClick={() => login()}>
+                    <img src="/google-icon.webp" alt="google" style={styles.googleIcon} />
+                    Đăng nhập với Google
+                </Button>
+
+                <p style={styles.footerText}>
+                    Chỉ dành cho tài khoản <strong style={{ color: LOGIN_COLOR.textMuted }}>@vimaru.edu.vn</strong>
+                </p>
             </Card>
         </div>
     );

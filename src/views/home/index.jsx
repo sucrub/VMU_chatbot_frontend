@@ -16,10 +16,10 @@ const Home = () => {
         <div style={{ padding: '2rem' }}>
             <h1>Example Protected Page</h1>
             <p>Welcome, {user?.name || user?.email || 'User'}!</p>
-            <pre style={{ background: '#f4f4f4', padding: '1rem', borderRadius: '8px' }}>
+            <pre style={{ background: '#000000', padding: '1rem', borderRadius: '8px' }}>
                 {JSON.stringify(user, null, 2)}
             </pre>
-            <button onClick={handleLogout} style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>
+            <button onClick={handleLogout} style={{ background: '#000000', marginTop: '1rem', padding: '0.5rem 1rem' }}>
                 Logout
             </button>
         </div>

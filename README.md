@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Chatbot Frontend - Vietnam Maritime University
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React-based chatbot frontend application for Vietnam Maritime University (VMU). This application provides an intuitive interface for students and faculty to interact with a chatbot assistant.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Google OAuth Authentication** - Secure login using Google accounts
+- **Token Management** - Automatic token refresh and session validation
+- **Protected Routes** - Role-based access control for authenticated users
+- **Responsive Design** - Built with Ant Design for a professional UI
+- **Redux State Management** - Centralized state management for auth and user data
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19** - UI framework
+- **Redux Toolkit** - State management
+- **Axios** - HTTP client with interceptors
+- **React Router** - Client-side routing
+- **Ant Design** - UI component library
+- **Google OAuth** - Authentication
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn
+- Google OAuth credentials (Client ID)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository
+2. Navigate to the project directory:
+   +"ash"+
+   cd chatbot
+   +""+
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
+   +"ash"+
+   npm install
+   +""+
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Create a .env file in the root directory with the following variables:
+   +"
+   REACT_APP_API_URL=http://localhost:5000
+   REACT_APP_GOOGLE_CLIENT_ID=your_google_client_id_here
+   +""+
 
-### `npm run eject`
+### Running the Application
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the development server:
++"ash"+
+npm start
++""+
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will open at [http://localhost:3000](http://localhost:3000) in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Building for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Build the optimized production bundle:
++"ash"+
+npm run build
++""+
 
-## Learn More
+The build output will be in the uild/ folder, ready for deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run tests in interactive watch mode:
++"ash"+
+npm test
++""+
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
++"
+src/
++-- api/              # API calls and axios configuration
++-- components/       # Reusable React components
++-- configs/          # Configuration files
++-- layouts/          # Layout components
++-- routes/           # Route definitions and protected routes
++-- store/            # Redux store and slices
++-- views/            # Page components (Login, Home, etc.)
++-- App.js            # Main App component
++""+
 
-### Analyzing the Bundle Size
+## Authentication Flow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. User logs in with Google OAuth
+2. Frontend receives authorization code
+3. Backend exchanges code for JWT tokens (accessToken, refreshToken)
+4. Tokens are stored in Redux state and localStorage
+5. On page refresh, app validates token using /user/me endpoint
+6. If token is expired, automatic refresh is triggered
+7. All API requests include the Bearer token in headers
 
-### Making a Progressive Web App
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Variable | Description | Example |
+|----------|-------------|---------|
+| REACT_APP_API_URL | Backend API base URL | http://localhost:5000 |
+| REACT_APP_GOOGLE_CLIENT_ID | Google OAuth Client ID | xxxxx.apps.googleusercontent.com |
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Please follow the established code style and create a new branch for each feature or bug fix.
 
-### Deployment
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For issues or questions, please contact the development team.
