@@ -1,17 +1,19 @@
 import { Card, Button } from "antd";
 import { useGoogleLogin } from '@react-oauth/google';
-import styles from "./index.styles";
+import { useLoginStyles } from "./index.styles";
 import { useDispatch, useSelector } from 'react-redux';
 import { setAuth, selectUser } from '../../store/slices/authSlice';
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../../api";
-import { LOGIN_COLOR } from "../../configs/color";
+import { useThemeColor } from "../../hook/useThemeColor";
 
 const Login = () => {
 
     const dispatch = useDispatch();
     const user = useSelector(selectUser);
+    const styles = useLoginStyles();
+    const { LOGIN_COLOR } = useThemeColor();
 
     const navigate = useNavigate();
 
