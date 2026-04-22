@@ -9,7 +9,7 @@ import { auth } from '../api';
 import { clearAuth } from '../store/slices/authSlice';
 import { store } from '../store';
 import LoadingScreen from '../components/loadingScreen';
-
+import ClassList from '../views/class';
 const AppRoutes = () => {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +42,7 @@ const AppRoutes = () => {
             <Route element={<ProtectedRoute />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/example" element={<Example />} />
-                <Route path="/class" element={<Example />} />
+                <Route path="/class" element={<ClassList />} />
                 {/* Add more protected routes here */}
             </Route>
 

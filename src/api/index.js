@@ -1,3 +1,3 @@
 import * as auth from "./auth";
-
-export { auth }
+import * as classApi from "./classApi";
+export { auth, classApi }

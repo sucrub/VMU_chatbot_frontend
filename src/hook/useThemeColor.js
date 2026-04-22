@@ -5,7 +5,10 @@ import {
     COLOR_LIGHT,
     COLOR_DARK,
     LOGIN_COLOR_LIGHT,
-    LOGIN_COLOR_DARK
+    LOGIN_COLOR_DARK,
+    CLASS_LIST_COLOR_DARK, 
+    CLASS_LIST_COLOR_LIGHT
+
 } from '../configs/color';
 
 export const useThemeColor = () => {
@@ -27,5 +30,6 @@ export const useThemeColor = () => {
         GRID_FADE: isDark
             ? 'rgba(31,111,235,0.05)'
             : 'rgba(31,111,235,0.08)',
+        CLASS_LIST_COLOR: theme === 'dark' ? CLASS_LIST_COLOR_DARK : CLASS_LIST_COLOR_LIGHT,
     };
 };

@@ -55,3 +55,33 @@ export const LOGIN_COLOR_DARK = {
     blueAlpha: 'rgba(31,111,235,0.1)',
     blueAlphaBorder: 'rgba(31,111,235,0.2)',
 };
+
+export const CLASS_LIST_COLOR_LIGHT = {
+    bg: '#ffffff',
+    surface: '#f6f8fa',
+    surfaceHover: '#eaeef2',
+    surfaceActive: '#e8ecf0',
+    border: '#d0d7de',
+    borderHover: '#adb5bd',
+    textPrimary: '#1f2328',
+    textMuted: '#656d76',
+    textFaint: '#adb5bd',
+    blue: '#0969da',
+    blueAlpha: 'rgba(9,105,218,0.1)',
+    blueAlphaBorder: 'rgba(9,105,218,0.2)',
+};
+
+export const CLASS_LIST_COLOR_DARK = {
+    bg: '#0d1117',
+    surface: '#161b22',
+    surfaceHover: '#21262d',
+    surfaceActive: '#22272e',
+    border: '#30363d',
+    borderHover: '#484f58',
+    textPrimary: '#e6edf3',
+    textMuted: '#8b949e',
+    textFaint: '#484f58',
+    blue: '#1f6feb',
+    blueAlpha: 'rgba(31,111,235,0.1)',
+    blueAlphaBorder: 'rgba(31,111,235,0.2)',
+};
