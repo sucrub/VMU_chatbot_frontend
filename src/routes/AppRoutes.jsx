@@ -42,6 +42,7 @@ const AppRoutes = () => {
             <Route element={<ProtectedRoute />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/example" element={<Example />} />
+                <Route path="/class" element={<Example />} />
                 {/* Add more protected routes here */}
             </Route>
 

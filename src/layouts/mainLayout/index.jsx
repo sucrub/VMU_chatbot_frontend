@@ -7,6 +7,7 @@ import {
     LogoutOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
+    UserOutlined
 } from '@ant-design/icons';
 import { COLOR } from '../../configs/color';
 import { siderMenuStyles, styles } from './index.styles';
@@ -16,7 +17,8 @@ import { clearAuth, selectUser } from '../../store/slices/authSlice';
 const { Sider, Content } = Layout;
 
 const menuItems = [
-    { key: '/', icon: <AppstoreOutlined />, label: 'Danh sách lớp học' },
+    { key: '/', icon: <UserOutlined /> , label: 'Thông tin người dùng' },
+    { key: '/class', icon: <AppstoreOutlined />, label: 'Danh sách lớp học' },
     { key: '/example', icon: <HomeOutlined />, label: 'Example' }
 ];
 
