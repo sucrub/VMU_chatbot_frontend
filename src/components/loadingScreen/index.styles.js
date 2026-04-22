@@ -1,16 +1,18 @@
-import { COLOR } from "../../configs/color";
+import { useThemeColor } from "../../hook/useThemeColor";
 
-const styles = {
-    container: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        background: COLOR.menuBg,
-    },
-    spin: {
-        transform: 'scale(2)'
-    }
-}
+export const useLoadingStyles = () => {
+    const { COLOR } = useThemeColor();
 
-export default styles;
+    return {
+        container: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            background: COLOR.menuBg,
+        },
+        spin: {
+            transform: 'scale(2)'
+        }
+    };
+};

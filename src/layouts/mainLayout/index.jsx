@@ -9,10 +9,10 @@ import {
     MenuUnfoldOutlined,
     UserOutlined
 } from '@ant-design/icons';
-import { COLOR } from '../../configs/color';
-import { siderMenuStyles, styles } from './index.styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearAuth, selectUser } from '../../store/slices/authSlice';
+import { useThemeColor } from '../../hook/useThemeColor';
+import { useLayoutStyles } from './index.styles';
 
 const { Sider, Content } = Layout;
 
@@ -23,10 +23,12 @@ const menuItems = [
 ];
 
 const UserPopoverContent = ({ logout }) => {
+    const { styles } = useLayoutStyles();
+    const { COLOR } = useThemeColor();
     return (
         <div
             style={styles.logoutHover}
-            onMouseEnter={e => e.currentTarget.style.background = '#21262d'}
+            onMouseEnter={e => e.currentTarget.style.background = COLOR.menuHover}
             onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
             onClick={logout}
         >
@@ -45,6 +47,9 @@ const MainLayout = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const user = useSelector(selectUser);
+    const { COLOR } = useThemeColor();
+
+    const { styles, siderMenuStyles } = useLayoutStyles();
 
     const handleLogout = () => {
         dispatch(clearAuth());

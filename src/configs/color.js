@@ -1,4 +1,19 @@
-const COLOR = {
+// configs/color.js
+
+export const COLOR_LIGHT = {
+    siderBg: '#f6f8fa',
+    menuBg: '#f6f8fa',
+    menuText: '#1f2328',
+    menuMuted: '#656d76',
+    menuHover: '#eaeef2',
+    menuSelected: '#0969da',
+    menuSelectedBg: '#eaeef2',
+    border: '#d0d7de',
+    contentBg: '#ffffff',
+    contentText: '#1f2328',
+};
+
+export const COLOR_DARK = {
     siderBg: '#161b22',
     menuBg: '#161b22',
     menuText: '#e6edf3',
@@ -11,7 +26,22 @@ const COLOR = {
     contentText: '#e6edf3',
 };
 
-const LOGIN_COLOR = {
+export const LOGIN_COLOR_LIGHT = {
+    bg: '#ffffff',
+    surface: '#f6f8fa',
+    surfaceHover: '#eaeef2',
+    surfaceActive: '#e8ecf0',
+    border: '#d0d7de',
+    borderHover: '#adb5bd',
+    textPrimary: '#1f2328',
+    textMuted: '#656d76',
+    textFaint: '#adb5bd',
+    blue: '#0969da',
+    blueAlpha: 'rgba(9,105,218,0.1)',
+    blueAlphaBorder: 'rgba(9,105,218,0.2)',
+};
+
+export const LOGIN_COLOR_DARK = {
     bg: '#0d1117',
     surface: '#161b22',
     surfaceHover: '#21262d',
@@ -25,5 +55,3 @@ const LOGIN_COLOR = {
     blueAlpha: 'rgba(31,111,235,0.1)',
     blueAlphaBorder: 'rgba(31,111,235,0.2)',
 };
-
-export { COLOR, LOGIN_COLOR };
